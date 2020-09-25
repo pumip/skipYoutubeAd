@@ -6,6 +6,7 @@ if (document.getElementsByClassName("ytp-ad-skip-button").length === 1) {
         const observer = new MutationObserver(function(record) {
             if (document.getElementsByClassName("ytp-ad-skip-button").length === 1) {
                 document.getElementsByClassName("ytp-ad-skip-button")[0].click();
+                document.querySelector('video').playbackRate = 1;
                 observer.disconnect();
             }
         });
